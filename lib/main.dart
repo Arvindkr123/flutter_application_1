@@ -17,16 +17,18 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green,
           title: const Text('Flutter is Fun'),
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            Expanded(
-              flex: 2,
-              child: Icon(Icons.backpack),
-            ),
-            Icon(Icons.leaderboard),
-            Icon(Icons.person),
+        body: Stack(
+          children: [
+            Container(color: Colors.red, width: 100, height: 100),
+            // Positioned(
+            //   child: Icon(Icons.verified),
+            //   top: 25,
+            //   left: 25,
+            // ), // it like absolute position kind of
+            Align(
+              child: Icon(Icons.verified),
+              alignment: Alignment.center,
+            )   // it is relative to parent
           ],
         ),
       ),
