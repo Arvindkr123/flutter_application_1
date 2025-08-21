@@ -11,17 +11,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter is Fun',
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green,
           title: const Text('Flutter is Fun'),
         ),
-        body: Center(
-          child: SizedBox(
-            child: Text('hii Mom'),
-            height: 50,
-            width: 50,
-          )
+        body: SizedBox.expand(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Expanded(
+                child: Icon(Icons.backpack),
+                flex: 2,
+              ),
+              Icon(Icons.leaderboard),
+              Icon(Icons.person),
+            ],
+          ),
         ),
       ),
     );
