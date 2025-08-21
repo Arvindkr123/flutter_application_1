@@ -17,26 +17,11 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter is Fun'),
         ),
         body: Center(
-          child: Container(
-            margin: const EdgeInsets.all(100),
-            padding: const EdgeInsets.all(20),
-            width: 100,
-            height: 100,
-            decoration: const BoxDecoration(
-              color: Colors.black87,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(4, 4),
-                  blurRadius: 10,
-                ),
-              ],
-            ),
-            child: const Text(
-              'hii mom @@',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
+          child: SizedBox(
+            child: Text('hii Mom'),
+            height: 50,
+            width: 50,
+          )
         ),
       ),
     );
