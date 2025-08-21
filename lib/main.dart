@@ -17,19 +17,17 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green,
           title: const Text('Flutter is Fun'),
         ),
-        body: SizedBox.expand(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              Expanded(
-                child: Icon(Icons.backpack),
-                flex: 2,
-              ),
-              Icon(Icons.leaderboard),
-              Icon(Icons.person),
-            ],
-          ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            Expanded(
+              flex: 2,
+              child: Icon(Icons.backpack),
+            ),
+            Icon(Icons.leaderboard),
+            Icon(Icons.person),
+          ],
         ),
       ),
     );
